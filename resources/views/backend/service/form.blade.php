@@ -37,7 +37,7 @@
 <div class="form-group">
     {!! Form::label('mpicurl', '图片:') !!}
     <input type="file" id="mpicurl" style="display: none" name="mpicurl" onChange="imgUploadChange(this)">
-    <img src="{{$data->mpicurl}}" class="img-responsive pad">
+    <img src="{{isset($data) ? $data->mpicurl :''}}" class="img-responsive pad">
     {{--@if(isset($filename) && !empty($filename))
     <img src="/template/{{$filename}}" alt="" class="img-responsive pad">
     @endif--}}

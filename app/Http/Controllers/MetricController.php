@@ -182,6 +182,7 @@ class MetricController extends BaseController
         if($request->has('action') && $request->action == 'add'){
             $data['publishtime'] = date('Y-m-d H:i:s');
             $data['mid'] = md5($request->integration);
+            $data['id'] = time().rand(1111,9999);
             DB::table('apmservices')->insert($data);
         }else{
             DB::table('apmservices')->where('integration',$request->integration)->update($data);
