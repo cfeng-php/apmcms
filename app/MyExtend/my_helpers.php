@@ -31,7 +31,7 @@ if(!function_exists('getMetricServiceTypeName')){
             '7' => '大数据',
             '8' => '集群部署与管理',
             '9' => '开发集成',
-            '10' => '系统性能'
+            '10' => '系统相关'
         ];
 
         return isset($arr[$type]) ? $arr[$type] : '';
