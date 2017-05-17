@@ -10,7 +10,7 @@
 <div class="form-group">
     {!! Form::label('type', 'type:') !!}
     <select name="type" class = 'form-control'>
-        @for($i=1;$i<=9;$i++)
+        @for($i=1;$i<=10;$i++)
             <option value="{{$i}}" @if(isset($data) && $i == $data->type ) selected="selected" @endif>{{ getMetricServiceTypeName($i) }}</option>
         @endfor
     </select>
