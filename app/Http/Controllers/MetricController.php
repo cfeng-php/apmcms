@@ -54,7 +54,7 @@ class MetricController extends BaseController
         }
 
         if($request->has('action') && $request->action == 'add'){
-            $data['id'] = strtoupper(md5(uniqid()));
+            $data['id'] = md5($integration);
             DB::table('metric_service')->insert($data);
         }else{
             DB::table('metric_service')->where('integration',$integration)->update($data);
