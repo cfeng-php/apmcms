@@ -39,6 +39,7 @@ class MetricController extends BaseController
             'is_display' => $request->is_display,
             'alias' => $request->alias,
             'logo' => $request->logo,
+            'logoname' => $request->logoname,
         ];
 
         //是否有上传文件

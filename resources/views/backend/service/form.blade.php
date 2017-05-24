@@ -35,6 +35,11 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('logoname', 'Logo Name:') !!}
+    {!! Form::text('logoname', isset($data) ? htmlspecialchars($data->logoname) : null, ['class' => 'form-control', 'autofocus' => 'autofocus']) !!}
+</div>
+
+<div class="form-group">
     {!! Form::label('mpicurl', '图片:') !!}
     <input type="file" id="mpicurl" style="display: none" name="mpicurl" onChange="imgUploadChange(this)">
     <img src="{{isset($data) ? $data->mpicurl :''}}" class="img-responsive pad">
