@@ -78,7 +78,7 @@
                         </div>
                         <div class="col-sm-7">
                             <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate">
-                                {!! $datas->render() !!}
+                                {!! $datas->appends(['search_name'=>$search_name])->render() !!}
                             </div>
                         </div>
                     </div>

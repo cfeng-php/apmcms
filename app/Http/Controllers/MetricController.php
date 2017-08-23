@@ -13,7 +13,7 @@ class MetricController extends BaseController
     {
         $page_num = 10;
         $services = DB::table('metric_service')->orderBy('integration','asc');
-        $search_name = false;
+        $search_name = null;
         if($request->has('search_name')){
             $search_name = $request->search_name;
             $services = $services->where('integration','like','%'.$search_name.'%');
@@ -81,7 +81,7 @@ class MetricController extends BaseController
     {
         $page_num = 10;
         $services = DB::table('metric_dis')->orderBy('metric_name','asc');
-        $search_name = false;
+        $search_name = null;
         if($request->has('search_name')){
             $search_name = $request->search_name;
             $services = $services->where('metric_name','like','%'.$search_name.'%');
@@ -148,7 +148,7 @@ class MetricController extends BaseController
     {
         $page_num = 10;
         $services = DB::table('apmservices')->orderBy('integration','asc');
-        $search_name = false;
+        $search_name = null;
         if($request->has('search_name')){
             $search_name = $request->search_name;
             $services = $services->where('integration','like','%'.$search_name.'%');
