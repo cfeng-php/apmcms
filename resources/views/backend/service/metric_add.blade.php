@@ -5,9 +5,6 @@
 @endsection
 @section('contentheader_title')
     服务详情
-    <div class="pull-right">
-        <a class="btn btn-sm btn-info" href="{{url('service/metric/add')}}"><i class="fa fa-plus"></i>添加</a>
-    </div>
 @endsection
 
 @section('main-content')
